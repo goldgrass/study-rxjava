@@ -21,7 +21,7 @@ import io.reactivex.observers.DisposableObserver;
 public class ObservableCreationTest {
 	@Test
 	public void observalbe은_subscribe할때_동작한다() {
-		// Observable은 subscribe하는 시점에 메시지가 발행되는 hot 방식
+		// Observable은 subscribe하는 시점에 메시지가 발행되는 cold 방식
 		// ObservableOnSubscribe 콜백은 observer가 등록될 때 실행되는 callback임.
 		Observable<Integer> observable = Observable.create(new ObservableOnSubscribe<Integer>() {
 			@Override
